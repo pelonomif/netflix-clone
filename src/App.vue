@@ -1,12 +1,23 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+    
+    <div>
+    
+    </div>
+    <router-link to="/signIn"></router-link> 
+ 
   <router-view/>
 </template>
 
+<script>
+
+</script>
+
+
 <style>
+body{
+  background-image: url('./assets/netflixBackground.jpg');
+  
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
