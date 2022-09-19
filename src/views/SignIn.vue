@@ -75,12 +75,10 @@ export default {
             password:''
         }
     }
-
 }
 </script>
 
 <style>
-
 .card{
     
     display: flex;
@@ -132,3 +130,5 @@ input{
     font-weight: bold;
 }
 </style>
+      
+
