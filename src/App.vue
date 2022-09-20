@@ -1,5 +1,5 @@
 <template>
-  
+
   <header>
   <nav class="navbar navbar-light">
     <a class="navbar-brand" href="#">
@@ -73,7 +73,7 @@
 
 <script> 
 export default {
-  name:'SignUp',
+  name:'SignIn',
   emits :{
   click: null,
   submit: ({email, password}) => { 
