@@ -45,7 +45,7 @@
                               </div>
                           </div>
                           <div class="form-btn">
-                              <button type="submit" class="btn" @click="goToHome()" value="signIn"> Sign In</button>
+                              <button type="submit" class="btn" @click.prevent="signIn" value="signIn"> Sign In</button>
                           </div>
                       
                           <div class="remember-me">
@@ -72,6 +72,7 @@
   </template>
   
   <script> 
+  import axios from 'axios'
   export default {
     name:'SignIn',
     emits :{
@@ -95,13 +96,17 @@
   
   
     methods: {
-    goToHome(){
-      this.$router.push ('/home');
-  
+      signIn(e){
+        if (email && password) {
+          this.$router.push({name: 'Home'})
+       
+      }
+      
+      }
     }
     }
   
-    }
+    
     </script>
   
   
