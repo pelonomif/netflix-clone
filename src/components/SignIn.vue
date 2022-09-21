@@ -121,16 +121,15 @@
     padding:0;
     box-sizing: border-box;
   }
-  body{
-    background-image: url('../assets/netflixBackground.jpg');
-  
-  }
+ 
   .logo{
     width: 200px;
     height:100px;
-    margin-left:-100px;
+    float: left;
   }
-  
+  .tile-title{
+    color: #fff;
+  }
   .SignIn{
   
     display: flex;

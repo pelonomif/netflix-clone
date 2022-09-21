@@ -1,10 +1,17 @@
 <template>
-  <h1>Netflix</h1>
+  <Headers>
+    <h1>Netflix</h1>
+  </Headers>
 </template>
 
 <script>
+import Headers from './Headers.vue'
+
 export default {
     name: 'Home',
+    components:{
+      Headers
+    },
     mounted(){
       let user = localStorage.getItem("user-info");
       if(!user){
@@ -18,6 +25,6 @@ export default {
 
 <style>
 h1{
-    color: #fff
+    color: salmon
 }
 </style>
