@@ -4,7 +4,14 @@
 
 <script>
 export default {
-    name: 'Home'
+    name: 'Home',
+    mounted(){
+      let user = localStorage.getItem("user-info");
+      if(!user){
+        //redirection to SignIn page if user is empty
+        this.$router.push({name:'SignIn'});
+      }
+    } 
 
 }
 </script>

@@ -3,12 +3,13 @@
     <header>
     <nav class="navbar navbar-light">
       <a class="navbar-brand" href="#">
-          <img class= "logo" src="../assets/netflixLogo.png" alt="Netflix Logo" width=" 200" height="100" ml="100rem">
+          <img class= "logo" src="../assets/netflixLogo.png" alt="Netflix Logo" >
       </a>
       </nav>
   
     </header>  
     <main>
+      
       <form @submit.prevent="handleSubmit">
           <div class="SignIn">
               <div class="bg tile">
@@ -75,16 +76,6 @@
   import axios from 'axios'
   export default {
     name:'SignIn',
-    emits :{
-    click: null,
-    submit: ({email, password}) => { 
-      if (email && password) {
-      return true
-      }
-      
-  
-      }  
-    }, 
     data(){
       return{
           email:'',
@@ -93,17 +84,31 @@
       
       }
     },
-  
-  
+   
     methods: {
-      signIn(e){
-        if (email && password) {
-          this.$router.push({name: 'Home'})
-       
+      async signIn(e){
+        let result = await axios.post("http://localhost:3000/users",{
+            email: this.email,
+            password: this.password,
+        });
+          console.log(result);
+          if (result.status == 201){
+ 
+            localStorage.setItem("user-info", JSON.stringify(result.data))
+            //redirecting to the home page
+            this.$router.push({name:'Home'})
+          }
+     
       }
-      
+    }, 
+    mounted(){
+      let user = localStorage.getItem("user-info");
+      if(user){
+        //redirecting to the home page
+        this.$router.push({name:'Home'})
       }
     }
+
     }
   
     
@@ -119,6 +124,11 @@
   body{
     background-image: url('../assets/netflixBackground.jpg');
   
+  }
+  .logo{
+    width: 200px;
+    height:100px;
+    margin-left:-100px;
   }
   
   .SignIn{
