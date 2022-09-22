@@ -91,7 +91,6 @@
             email: this.email,
             password: this.password,
         });
-          console.log(result);
           if (result.status == 201){
  
             localStorage.setItem("user-info", JSON.stringify(result.data))
@@ -115,12 +114,13 @@
     </script>
   
   
-    <style>
+    <style scoped>
   *{
     margin:0;
     padding:0;
     box-sizing: border-box;
   }
+
  
   .logo{
     width: 200px;

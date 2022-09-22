@@ -6,7 +6,7 @@
             <img class= "nt-logo" src="../assets/netflixLogo.png" alt="Netflix Logo" >
         </a>
 
-        <a class="logOutBtn">Logout</a>
+        <button type="submit" @click.prevent="logout" class="logOutBtn">Logout</button>
       
       </nav>
 
@@ -17,6 +17,13 @@
 <script>
 export default {
     name: 'Header',
+    methods: {
+      logout(e){
+        localStorage.clear();
+        this.$router.push({name: 'SignIn'})
+
+      }
+    }
 
 }
 </script>
