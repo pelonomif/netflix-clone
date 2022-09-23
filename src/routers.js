@@ -1,6 +1,7 @@
 import Home from './components/Home.vue'
 import SignIn from './components/SignIn.vue'
 import Headers from './components/Headers.vue'
+import Movies from './components/Movies.vue'
 import {createRouter, createWebHashHistory} from 'vue-router'
 
 const routes= [
@@ -18,6 +19,16 @@ const routes= [
         path: '/headers',
         name: 'Headers',
         component: Headers,
+    },
+    {
+        path: '/movies',
+        name: 'Movies',
+        component: Movies,
+    },
+    {
+        path: '/movies.id',
+        name: 'Movies',
+        component: Movies,
     }
 ]
 

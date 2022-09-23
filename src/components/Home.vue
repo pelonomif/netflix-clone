@@ -2,15 +2,24 @@
   <Headers>
     <h1>Netflix</h1>
   </Headers>
+  <Movies/>  
 </template>
 
 <script>
 import Headers from './Headers.vue'
+import Movies from './Movies.vue'
 
 export default {
     name: 'Home',
+    data(){
+      return{
+        name: '',
+        movies:[],
+      }
+    },
     components:{
-      Headers
+      Headers,
+      Movies
     },
     mounted(){
       let user = localStorage.getItem("user-info");
@@ -18,13 +27,12 @@ export default {
         //redirection to SignIn page if user is empty
         this.$router.push({name:'SignIn'});
       }
-    } 
-
+    },
+  
+  
 }
 </script>
 
 <style>
-h1{
-    color: salmon
-}
+
 </style>
