@@ -1,19 +1,16 @@
-# netflix-clone2
+A Netflix clone based on Vue. 
+
+To use this project, a few steps are required. 
 
 ## Project setup
 ```
-npm install
+1. Open new terminal on vs code and run npm install
+2. Type npm run serve
+3. Click on "localhost8080"
+
+To get the content, double click the db.json folder and open cmd outlet. 
+1. Type "json-server --watch db.json:.
+2. Log in to see the content
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+.
