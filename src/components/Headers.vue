@@ -5,7 +5,7 @@
         <a class="navbar-brand" href="#">
             <img class= "nt-logo" src="../assets/netflixLogo.png" alt="Netflix Logo" >
         </a>
-
+        <p><i class="fa-regular fa-user"></i></p>
         <button type="submit" @click.prevent="logout" class="logOutBtn">Logout</button>
       
       </nav>
@@ -31,7 +31,6 @@ export default {
     float: left;
     width: 100%;
     display: inline-flex;
-    border: blue dotted 3px;
   }
   .nt-logo{
     width: 250px;

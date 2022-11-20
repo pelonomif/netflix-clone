@@ -1,6 +1,5 @@
 <template>
   <Headers>
-    <h1>Netflix</h1>
   </Headers>
   <Movies/>
 </template>
@@ -32,5 +31,12 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
+body{
+  background-color: #333;
+  color: #fff;
+}
+
+
+
 </style>

@@ -4,7 +4,7 @@
             <li>{{movie.id}}</li>
             <li>{{movie.name}}</li>
             <li>{{movie.duration}}</li>
-            <li> <img :src="movie.image"/></li>
+            <li> <img :src="movie.image + movie.id"/></li>
             <li>{{movie.release_date}}</li>
             <li>{{movie.description}}</li>
            
@@ -32,10 +32,29 @@ export default {
 </script>
 
 <style>
-.movies img{
-    width:50px;
+
+
+div {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.movie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    border: 1px solid blue;
+
+}
+
+img{
+    max-width: 100%;
+    height: 200px;
+    padding: 10%;
 }
 ul{
     list-style: none;
 }
+
 </style>
